@@ -25,3 +25,12 @@ SELECT name AS 'Employee Name', age AS 'Years Old' FROM employees;
 
 -- Limiting Rows with TOP
 SELECT TOP 3 * FROM Customers;
+
+-- Using CASE in SELECT
+SELECT CustomerName, Country,
+CASE
+    WHEN Country = 'USA' THEN 'United States'
+    WHEN Country = 'UK' THEN 'United Kingdom'
+    ELSE 'Other'
+END AS CountryName
+FROM Customers;
