@@ -32,6 +32,12 @@ HAVING COUNT(*) > 5;
 --DISTINCT with Aggregate Functions:
 SELECT COUNT(DISTINCT Department) AS UniqueDepartments FROM Employees;
 
+-- ORDER BY
+SELECT Department, AVG(Salary) AS AverageSalary
+FROM Employees
+GROUP BY Department
+ORDER BY AverageSalary DESC;
+
 -- Use Cases
 -- Data Summarization: Analyzing total sales, average salary, or maximum profit.
 -- Data Grouping: Categorizing data into meaningful groups using GROUP BY.

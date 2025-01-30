@@ -34,3 +34,12 @@ CASE
     ELSE 'Other'
 END AS CountryName
 FROM Customers;
+
+
+-- Using Common Table Expressions (CTE)
+WITH CustomerCTE AS (
+    SELECT CustomerID, CustomerName, Country
+    FROM Customers
+    WHERE Country = 'Germany'
+)
+SELECT * FROM CustomerCTE;
