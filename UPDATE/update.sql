@@ -55,3 +55,9 @@ FROM Employees e
 INNER JOIN Departments d ON e.department_id = d.department_id  
 WHERE d.department_name = 'Sales';
 
+
+--- subquery_alias 
+SELECT A, B ,'C'
+FROM (
+    SELECT 'A' AS A, 'B' AS B
+) AS subquery_alias;
